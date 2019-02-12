@@ -1,0 +1,14 @@
+---
+- hosts: ceph
+  roles:
+  - ceph-common
+
+- hosts: ~.*-mon.*:&ceph
+  roles:
+  - ceph-mon
+  - ceph-rgw
+
+- hosts: ~.*-data.*:&ceph
+  roles:
+  - ceph-common
+  - ceph-osd

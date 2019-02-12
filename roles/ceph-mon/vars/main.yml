@@ -1,0 +1,4 @@
+---
+
+mon_key_path: /tmp/ceph.mon.keyring
+mon_map_path: /tmp/monmap
